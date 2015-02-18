@@ -1,0 +1,6 @@
+<script>
+  dataLayer = [{
+    'pageCategory': 'signup',
+    'visitorType': 'high-value'
+  }];
+</script>

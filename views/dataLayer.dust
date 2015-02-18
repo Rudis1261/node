@@ -1,0 +1,6 @@
+<script>
+    dataLayer = [];
+    dataLayer.push({"sc": {'view': 'it'}});
+    dataLayer.push({"sc": {'view': 'now'}});
+    //dataLayer.push({"sc":['sendEmail', "iam@thatguy.co.za"]});
+</script>

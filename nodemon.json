@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": [".git", ".git/*"],
+  "watch": ["views/*.dust","*.dust", "*.js", "routes/*.js", "public/*"]
+}
