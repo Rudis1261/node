@@ -9,11 +9,28 @@
 
     <title>Starter Template for Bootstrap</title>
 
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     {>dataLayer/}
     {>gtm/}
+
+    <script>
+
+      $(document).ready(function(){
+
+        for(item in dataLayer) {
+          var key   = Object.keys(dataLayer[item]);
+          var value = dataLayer[item][key];
+
+          $('.dataLayer').append("<div>DataLayer Key [" + key[0] + "] = [" + value + "]</div>");
+        }
+
+      });
+    </script>
 
   </head>
 
@@ -21,18 +38,10 @@
 
     <div class="container">
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>Testing Web-Predict</h1>
+        <h4>Found the following content in the datalayer</h4>
       </div>
-
     </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <div class="container dataLayer"></div>
   </body>
 </html>

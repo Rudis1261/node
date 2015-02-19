@@ -1,0 +1,29 @@
+<script type="text/javascript">
+var ScarabQueue = ScarabQueue || [];
+(function(subdomain, id) {
+  if (document.getElementById(id)) return;
+  var js = document.createElement('script'); js.id = id;
+  js.src = subdomain + '.scarabresearch.com/js/14837B2AD9E0B3FC/scarab-v2.js';
+  var fs = document.getElementsByTagName('script')[0];
+  fs.parentNode.insertBefore(js, fs);
+})('https:' == document.location.protocol ? 'https://recommender' : 'http://cdn', 'scarab-js-api');
+
+
+if (typeof {{web_predict_view}} !== "undefined"){
+    ScarabQueue.push(['view', {{web_predict_view}}]);
+}
+
+if (typeof {{web_predict_set_email}} !== "undefined"){
+    ScarabQueue.push(['setEmail', {{web_predict_set_email}}]);
+}
+
+if (typeof {{web_predict_category}} !== "undefined"){
+    ScarabQueue.push(['category', {{web_predict_category}}]);
+}
+
+if (typeof {{web_predict_purchase}} !== "undefined" && typeof {{web_predict_purchase}} == "object"){
+    ScarabQueue.push(['purchase', {{web_predict_purchase}}]);
+}
+
+ScarabQueue.push(['go']);
+</script>

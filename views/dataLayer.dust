@@ -1,6 +1,14 @@
 <script>
     dataLayer = [];
-    dataLayer.push({"sc": {'view': 'it'}});
-    dataLayer.push({"sc": {'view': 'now'}});
-    //dataLayer.push({"sc":['sendEmail', "iam@thatguy.co.za"]});
+    dataLayer.push({'web_predict_view': 'SPK-12SJHN'});
+    dataLayer.push({'web_predict_set_email': 'iam@thatguy.co.za'});
+    dataLayer.push({'web_predict_category': 'men > shoes > boots'});
+    dataLayer.push({'web_predict_purchase': {
+            orderId: '231213',
+            items: [
+              {item: '182', price: 19.9, quantity: 1},
+              {item: '747', price: 29.7, quantity: 3}
+            ]
+        }
+    });
 </script>

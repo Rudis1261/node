@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var dust         = require('dustjs-helpers');
 var consolidate  = require('consolidate');
-var fs           = require('fs');
 
 var routes       = require('./routes/index');
 var users        = require('./routes/users');
@@ -24,8 +23,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-fs.writeFile(__dirname + '/start.log', 'started');
 
 app.use('/', routes);
 
